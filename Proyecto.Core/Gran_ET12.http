@@ -1,0 +1,6 @@
+@Gran_ET12_HostAddress = http://localhost:5179
+
+GET {{Gran_ET12_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
