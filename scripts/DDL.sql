@@ -1,1 +1,36 @@
--- holo
+CREATE TABLE Jugador
+(
+    Id SMALLINT UNSIGNED PRIMARY KEY,
+    IdEquipo TINYINT UNSIGNED NOT NULL,
+    IdPosicion TINYINT UNSIGNED NOT NULL,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    Apodo VARCHAR(50) NULL,
+    FechaNacimiento DATE NOT NULL,
+    Cotizacion DECIMAL(10,2) NOT NULL,
+    CONSTRAINT FK_Jugador_Equipo FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id),
+    CONSTRAINT FK_Jugador_Posicion FOREIGN KEY (IdPosicion) REFERENCES Posicion(Id)
+);
+
+CREATE TABLE Posicion
+(
+    Id TINYINT UNSIGNED PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    CONSTRAINT UQ_Posicion_Nombre UNIQUE (Nombre)
+);
+
+CREATE TABLE Equipo
+(
+    Id TINYINT UNSIGNED PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    CONSTRAINT UQ_Equipo_Nombre UNIQUE (Nombre)
+);
+
+CREATE TABLE Usuario
+(
+    Id TINYINT UNSIGNED PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    CONSTRAINT UQ_Usuario_Email UNIQUE (Email)
+);
