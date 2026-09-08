@@ -2,7 +2,7 @@ using System;
 using Models;
 using System.Collections.Generic;
 
-namespace Repositories
+namespace Interfaces
 {
     public interface IRepoJugador
     {
@@ -10,7 +10,7 @@ namespace Repositories
         Jugador? ObtenerPorId(ushort id);
         Equipo? ObtenerEquipoPorJugador(ushort id);
         Posicion? ObtenerPosicionPorJugador(ushort id);
-        Jugador Agregar(Jugador jugador);
+        void Agregar(Jugador jugador);
         void Eliminar(ushort id);
     }
 }

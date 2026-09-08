@@ -3,9 +3,9 @@ namespace Models
 {
     public class Puntuacion
     {
-        private int _id { get; set; }
-        private ushort _idJugador { get; set; }
-        private byte _fecha { get; set; }
-        private float _puntuacion { get; set; }
+        public int Id { get; set; }
+        public ushort IdJugador { get; set; }
+        public byte Fecha { get; set; }
+        public float Puntuacion { get; set; }
     }
 }

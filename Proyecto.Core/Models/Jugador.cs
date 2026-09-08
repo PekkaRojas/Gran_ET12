@@ -4,13 +4,13 @@ namespace Models
 {
     public class Jugador
     {
-        private ushort _id {get; set;}
-        private string _nombre {get; set;}
-        private string _apellido {get; set;}
-        private string _apodo {get; set;} = string.Empty;
-        private DateTime _fechaNacimiento {get; set;} = DateTime.MinValue;
-        private byte _idEquipo {get; set;}
-        private float _cotizacion {get; set;}
-        private byte _idPosicion {get; set;}
+        public ushort Id {get; set;}
+        public string Nombre {get; set;}
+        public string Apellido {get; set;}
+        public string Apodo {get; set;} = string.Empty;
+        public DateTime FechaNacimiento {get; set;} = DateTime.MinValue;
+        public byte IdEquipo {get; set;}
+        public float Cotizacion {get; set;}
+        public byte IdPosicion {get; set;}
     }
 }

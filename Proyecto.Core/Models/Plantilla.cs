@@ -1,10 +1,10 @@
 using System;
-namespace Model
+namespace Models
 {
     public class Plantilla
     {
-        private int _id { get; set; }
-        private ushort _idUsuario { get; set; }
-        private byte _fecha { get; set; }
+        public int Id { get; set; }
+        public ushort IdUsuario { get; set; }
+        public byte Fecha { get; set; }
     }
 }

@@ -3,7 +3,7 @@ namespace Models
 {
     public class Posicion
     {
-        private byte _id {get; set;}
-        private string _nombre {get; set;}
+        public byte Id {get; set;}
+        public string Nombre {get; set;}
     }
 }

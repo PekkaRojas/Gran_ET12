@@ -3,12 +3,12 @@ namespace Models
 {
     public class Usuario
     {
-        private ushort _id {get; set;}
-        private string _nombre {get; set;}
-        private string _apellido {get; set;}
-        private string _email {get; set;}
-        private DateTime _fechaNacimiento {get; set;} = DateTime.MinValue;
-        private string _contraseña {get; set;}
+        public ushort Id { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+        public string Apellido { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public DateTime FechaNacimiento { get; set; } = DateTime.MinValue;
+        public string Contraseña { get; set; } = string.Empty;
     }
 }
 
