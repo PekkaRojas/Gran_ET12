@@ -26,11 +26,47 @@ CREATE TABLE Equipo
     CONSTRAINT UQ_Equipo_Nombre UNIQUE (Nombre)
 );
 
+CREATE TABLE Puntuacion
+(
+    Id INT PRIMARY KEY,
+    IdJugador SMALLINT UNSIGNED NOT NULL,
+    Fecha TINYINT UNSIGNED NOT NULL,
+    Puntuacion DECIMAL(3,1) NOT NULL,
+    CONSTRAINT FK_Puntuacion_Jugador FOREIGN KEY (IdJugador) REFERENCES Jugador(Id)
+);
+
+CREATE TABLE Plantilla
+(
+    Id INT PRIMARY KEY,
+    IdUsuario TINYINT UNSIGNED NOT NULL,
+    Fecha TINYINT UNSIGNED NOT NULL ,
+    CONSTRAINT FK_Plantilla_Usuario FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id)
+);
+
+CREATE TABLE PlantillaTitular
+(
+    Id INT PRIMARY KEY,
+    IdPlantilla INT NOT NULL,
+    IdJugador SMALLINT UNSIGNED NOT NULL,
+    CONSTRAINT FK_PlantillaTitular_Plantilla FOREIGN KEY (IdPlantilla) REFERENCES Plantilla(Id),
+    CONSTRAINT FK_PlantillaTitular_Jugador FOREIGN KEY (IdJugador) REFERENCES Jugador(Id)
+);
+
+CREATE TABLE PlantillaSuplente
+(
+    Id INT PRIMARY KEY,
+    IdPlantilla INT NOT NULL,
+    IdJugador SMALLINT UNSIGNED NOT NULL,
+    CONSTRAINT FK_PlantillaSuplente_Plantilla FOREIGN KEY (IdPlantilla) REFERENCES Plantilla(Id),
+    CONSTRAINT FK_PlantillaSuplente_Jugador FOREIGN KEY (IdJugador) REFERENCES Jugador(Id)
+);
+
 CREATE TABLE Usuario
 (
     Id TINYINT UNSIGNED PRIMARY KEY,
     Nombre VARCHAR(50) NOT NULL,
     Apellido VARCHAR(50) NOT NULL,
     Email VARCHAR(100) NOT NULL,
+    Contrasena VARCHAR(64) NOT NULL,
     CONSTRAINT UQ_Usuario_Email UNIQUE (Email)
 );
