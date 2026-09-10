@@ -27,14 +27,15 @@ namespace Repositories
             throw new NotImplementedException("Falta conectar el repositorio real de jugadores.");
         }
 
-        public void Agregar(Jugador jugador)
+        public Jugador Agregar(Jugador jugador)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de jugadores.");
         }
-
-        public void Eliminar(ushort id)
+        
+        public bool Eliminar(ushort id)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de jugadores.");
+            return false;
         }
     }
 }

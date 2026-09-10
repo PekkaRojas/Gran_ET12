@@ -27,14 +27,15 @@ namespace Repositories
             throw new NotImplementedException("Falta conectar el repositorio real de plantillas.");
         }
 
-        public void Agregar(Plantilla plantilla)
+        public Plantilla Agregar(Plantilla plantilla)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de plantillas.");
         }
 
-        public void Eliminar(ushort id)
+        public bool Eliminar(ushort id)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de plantillas.");
+            return false;
         }
     }
 }

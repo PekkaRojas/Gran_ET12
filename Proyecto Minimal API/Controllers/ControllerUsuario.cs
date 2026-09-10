@@ -1,0 +1,67 @@
+using System;
+using Models;
+using Services;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UsuarioController : ControllerBase
+    {
+        private readonly UsuarioService _service;
+
+        public UsuarioController(UsuarioService usuarioService)
+        {
+            _service = usuarioService;
+        }
+
+        [HttpPost]
+        public IActionResult<Usuario> Agregar(Usuario usuario)
+        {
+            if (usuario.Id == null)
+                return BadRequest();
+            if (string.IsNullOrEmpty(usuario.Nombre))
+                return BadRequest();
+            if (string.IsNullOrEmpty(usuario.Apellido))
+                return BadRequest();
+            if (string.IsNullOrEmpty(usuario.Email))
+                return BadRequest();
+            if (string.IsNullOrEmpty(usuario.Contraseña))
+                return BadRequest();
+            if (usuario.FechaNacimiento == DateTime.MinValue)
+                return BadRequest();
+            var nuevoUsuario = _service.Agregar(usuario);
+            return Ok(nuevoUsuario);
+        }
+
+        [HttpGet]
+        public IActionResult<List<Usuario>> Obtener()
+        {
+            var usuarios = _service.ObtenerTodos();
+            return Ok(usuarios);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult<Usuario> ObtenerPorId(int id)
+        {
+            var usuario = _service.ObtenerPorId(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+            return Ok(usuario);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Eliminar(int id)
+        {
+            var eliminado = _service.Eliminar(id);
+            if (!eliminado)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+    }
+}

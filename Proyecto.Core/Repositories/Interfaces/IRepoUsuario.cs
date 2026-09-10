@@ -8,8 +8,8 @@ namespace Interfaces
     {
         List<Usuario> ObtenerTodos();
         Usuario? ObtenerPorId(ushort id);
-        void Agregar(Usuario usuario);
-        void Eliminar(ushort id);
+        Usuario Agregar(Usuario usuario);
+        bool Eliminar(ushort id);
 
     }
 }

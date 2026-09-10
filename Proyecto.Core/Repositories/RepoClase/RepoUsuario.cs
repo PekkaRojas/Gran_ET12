@@ -7,7 +7,7 @@ namespace Repositories
 {
     public class RepoUsuario : IRepoUsuario
     {
-        public void Agregar(Usuario usuario)
+        public Usuario Agregar(Usuario usuario)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de usuarios.");
         }
@@ -22,9 +22,10 @@ namespace Repositories
             throw new NotImplementedException("Falta conectar el repositorio real de usuarios.");
         }
 
-        public void Eliminar(ushort id)
+        public bool Eliminar(ushort id)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de usuarios.");
+            return false;
         }
     }
 }

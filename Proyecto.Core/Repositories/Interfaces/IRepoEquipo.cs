@@ -9,7 +9,7 @@ namespace Interfaces
         List<Equipo> ObtenerTodos();
         Equipo? ObtenerPorId(ushort id);
         List<Jugador> ObtenerJugadoresPorEquipo(ushort id);
-        void Agregar(Equipo equipo);
-        void Eliminar(ushort id);
+        Equipo Agregar(Equipo equipo);
+        bool Eliminar(ushort id);
     }
 }

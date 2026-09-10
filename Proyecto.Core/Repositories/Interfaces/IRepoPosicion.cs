@@ -9,7 +9,7 @@ namespace Interfaces
         List<Posicion> ObtenerTodos();
         Posicion? ObtenerPorId(ushort id);
         List<Jugador> ObtenerJugadoresPorPosicion(ushort id);
-        void Agregar(Posicion posicion);
-        void Eliminar(ushort id);
+        Posicion Agregar(Posicion posicion);
+        bool Eliminar(byte id);
     }
 }

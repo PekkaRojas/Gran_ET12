@@ -22,14 +22,15 @@ namespace Repositories
             throw new NotImplementedException("Falta conectar el repositorio real de equipos.");
         }
 
-        public void Agregar(Equipo equipo)
+        public Equipo Agregar(Equipo equipo)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de equipos.");
         }
 
-        public void Eliminar(ushort id)
+        public bool Eliminar(ushort id)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de equipos.");
+            return false;
         }
     }
 }

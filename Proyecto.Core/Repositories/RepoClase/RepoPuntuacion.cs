@@ -7,7 +7,7 @@ namespace Repositories
 {
     public class RepoPuntuacion : IRepoPuntuacion
     {
-        public void Agregar(Puntuacion puntuacion)
+        public Puntuacion Agregar(Puntuacion puntuacion)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de puntuaciones.");
         }
@@ -22,9 +22,10 @@ namespace Repositories
             throw new NotImplementedException("Falta conectar el repositorio real de puntuaciones.");
         }
 
-        public void Eliminar(ushort id)
+        public bool Eliminar(ushort id)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de puntuaciones.");
+            return false;
         }
     }
 }

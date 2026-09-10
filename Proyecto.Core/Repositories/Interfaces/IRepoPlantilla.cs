@@ -10,7 +10,7 @@ namespace Interfaces
         Plantilla? ObtenerPorId(ushort id);
         List<Jugador> ObtenerJugadoresPorPlantilla(ushort id);
         float ObtenerCalificacionPlantilla(ushort id);
-        void Agregar(Plantilla plantilla);
-        void Eliminar(ushort id);
+        Plantilla Agregar(Plantilla plantilla);
+        bool Eliminar(ushort id);
     }
 }

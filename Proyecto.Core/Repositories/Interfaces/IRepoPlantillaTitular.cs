@@ -9,7 +9,7 @@ namespace Interfaces
         List<PlantillaTitular> ObtenerTodos();
         PlantillaTitular? ObtenerPorId(ushort id);
         List<Jugador> ObtenerTitularesPlantilla(ushort id);
-        void Agregar(PlantillaTitular plantillaTitular);
-        void Eliminar(int id);
+        PlantillaTitular Agregar(PlantillaTitular plantillaTitular);
+        bool Eliminar(int id);
     }
 }

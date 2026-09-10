@@ -10,7 +10,7 @@ namespace Interfaces
         Jugador? ObtenerPorId(ushort id);
         Equipo? ObtenerEquipoPorJugador(ushort id);
         Posicion? ObtenerPosicionPorJugador(ushort id);
-        void Agregar(Jugador jugador);
-        void Eliminar(ushort id);
+        Jugador Agregar(Jugador jugador);
+        bool Eliminar(ushort id);
     }
 }

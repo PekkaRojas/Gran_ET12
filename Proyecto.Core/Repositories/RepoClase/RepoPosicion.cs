@@ -7,7 +7,7 @@ namespace Repositories
 {
     public class RepoPosicion : IRepoPosicion
     {
-        public void Agregar(Posicion posicion)
+        public Posicion Agregar(Posicion posicion)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de posiciones.");
         }
@@ -27,9 +27,10 @@ namespace Repositories
             throw new NotImplementedException("Falta conectar el repositorio real de posiciones.");
         }
 
-        public void Eliminar(ushort id)
+        public bool Eliminar(ushort id)
         {
             throw new NotImplementedException("Falta conectar el repositorio real de posiciones.");
+            return false;
         }
     }
 }

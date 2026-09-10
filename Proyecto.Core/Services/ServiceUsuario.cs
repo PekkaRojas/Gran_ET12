@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Repositories;
 using Interfaces;
 using Models;
@@ -15,9 +16,9 @@ namespace Services
             _repoUsuario = repoUsuario;
         }
 
-        public void Agregar(Usuario usuario)
+        public Usuario Agregar(Usuario usuario)
         {
-            _repoUsuario.Agregar(usuario);
+            return_repoUsuario.Agregar(usuario);
         }
 
         public List<Usuario> ObtenerTodos()
@@ -30,9 +31,9 @@ namespace Services
             return _repoUsuario.ObtenerPorId(id);
         }
 
-        public void Eliminar(ushort id)
+        public bool Eliminar(ushort id)
         {
-            _repoUsuario.Eliminar(id);
+            return _repoUsuario.Eliminar(id);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Interfaces
         Puntuacion? ObtenerPorId(ushort id);
         List<Jugador> ObtenerJugadoresPorPuntuacion(ushort id);
         float ObtenerCalificacionPuntuacion(ushort id);
-        void Agregar(Puntuacion puntuacion);
-        void Eliminar(int id);
+        Puntuacion Agregar(Puntuacion puntuacion);
+        bool Eliminar(int id);
     }
 }
