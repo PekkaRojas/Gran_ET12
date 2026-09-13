@@ -18,3 +18,9 @@ Bitacora_02 = {
     titulo = "Estructura principal",
     descripcion = "El DDL quedo redactado; en base a eso, se terminaron de escribir los Models y las interfaces de repos. Llegue a tener un error de concepto y no implementaba las interfaces de repos a ninguna clase, por consecuencia llegando a tener conflicto a la hora de definir los services. Pero releyendo proyectos viejos y sus esquemas cree las clases de repositorios y en estas implemente las interfaces de repos. Esto quedandome como aprendizaje y esquema de proyectos."
 }
+
+Bitacora_03 = {
+    fecha = '10-09-2026',
+    titulo = 'Cimientos de logica de negocios y frontend',
+    descripcion = "El service y el controler de Usuario fueron programados, al menos sus cimientos. Debido a que no hay conexion a la base de datos porque no hay base de datos, la logica de negocios casi que no influye en el flujo de datos: El sevice directamente llama al repo con los datos crudos, sin filtrar. Hasta no tener una BD u controladores mas solidos no puedo aplcar logica de negocios."
+}
